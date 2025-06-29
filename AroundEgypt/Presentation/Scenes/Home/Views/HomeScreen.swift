@@ -31,7 +31,10 @@ struct HomeScreen: View {
         }
         .sheet(item: $viewModel.selectedID) { selectedID in
             ExperienceDetailsScreen(
-                viewModel: ExperienceDetailsViewModel(selectedID: selectedID.value)
+                viewModel: ExperienceDetailsViewModel(
+                    selectedID: selectedID.value,
+                    delegate: viewModel
+                )
             )
         }
     }

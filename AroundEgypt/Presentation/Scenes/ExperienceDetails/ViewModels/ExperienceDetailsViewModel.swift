@@ -8,9 +8,42 @@
 import Foundation
 
 final class ExperienceDetailsViewModel: ObservableObject {
-    let selectedID: String
+    @Published var experience: Experience = .empty
+    @Published var isLoading: Bool = true
+    @Published var error: Error?
 
-    init(selectedID: String) {
+    let selectedID: String
+    weak var delegate: ExperienceDetailsDelegate?
+    private let interactor = ExperienceDetailsInteractor()
+
+    init(selectedID: String, delegate: ExperienceDetailsDelegate? = nil) {
         self.selectedID = selectedID
+        self.delegate = delegate
+    }
+
+    @MainActor
+    func viewDidLoad() async {
+        let result = await interactor.fetchSingleExperience(with: selectedID)
+        isLoading = false
+        switch result {
+        case .success(let experience):
+            self.experience = experience
+        case .failure(let error):
+            self.error = error
+        }
+    }
+
+    func likeExperince() {
+        Task { @MainActor in
+            let result = await interactor.likeExperince(with: selectedID)
+            switch result {
+            case .success(let newLikesCount):
+                experience.likes = newLikesCount
+
+                delegate?.experienceDidUpdateLikes(experienceId: selectedID, newLikesCount: newLikesCount)
+            case .failure(let error):
+                self.error = error
+            }
+        }
     }
 }

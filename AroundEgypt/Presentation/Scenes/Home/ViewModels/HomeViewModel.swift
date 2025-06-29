@@ -5,6 +5,7 @@
 //  Created by iOSAYed on 29/06/2025.
 //
 
+import Combine
 import Foundation
 
 final class HomeViewModel: ObservableObject {
@@ -17,6 +18,13 @@ final class HomeViewModel: ObservableObject {
     @Published var error: Error?
 
     private let interactor = HomeInteractor()
+    private let stateManager = SharedExperienceStateManager.shared
+
+    init() {
+        setupLikeUpdatesListener()
+    }
+
+    private var cancellables = Set<AnyCancellable>()
 
     @MainActor
     func viewDidLoad() async {
@@ -50,12 +58,8 @@ final class HomeViewModel: ObservableObject {
             let result = await interactor.likeExperince(with: id)
             switch result {
                 case .success(let newLikesCount):
-                    if let index = recommendedExperiences.firstIndex(where: { $0.id == id }) {
-                        recommendedExperiences[index].likes = newLikesCount
-                    }
-                    if let index = recentExperiences.firstIndex(where: { $0.id == id }) {
-                        recentExperiences[index].likes = newLikesCount
-                    }
+                    updateLikesCount(for: id, newCount: newLikesCount)
+                    stateManager.updateLikeCount(for: id, newCount: newLikesCount)
                 case .failure(let error):
                     self.error = error
             }
@@ -64,6 +68,42 @@ final class HomeViewModel: ObservableObject {
 
     func didSelectExperience(with id: String) {
         selectedID = IdentifiableString(id)
+    }
+
+    func dismissSheet() {
+        selectedID = nil
+    }
+
+    private func handleExperienceUpdates(_ updates: [String: Int]) {
+        for (experienceId, newLikesCount) in updates {
+            updateLikesCount(for: experienceId, newCount: newLikesCount)
+        }
+    }
+
+    private func updateLikesCount(for id: String, newCount: Int) {
+        if let index = recommendedExperiences.firstIndex(where: { $0.id == id }) {
+            recommendedExperiences[index].likes = newCount
+            recommendedExperiences[index].isLiked = true
+        }
+        
+        if let index = recentExperiences.firstIndex(where: { $0.id == id }) {
+            recentExperiences[index].likes = newCount
+            recentExperiences[index].isLiked = true
+        }
+        
+        if let index = filteredExperiences.firstIndex(where: { $0.id == id }) {
+            filteredExperiences[index].likes = newCount
+            filteredExperiences[index].isLiked = true
+        }
+    }
+
+    private func setupLikeUpdatesListener() {
+        stateManager.likeUpdates
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] experienceId, newLikesCount in
+                self?.updateLikesCount(for: experienceId, newCount: newLikesCount)
+            }
+            .store(in: &cancellables)
     }
 }
 
@@ -88,5 +128,11 @@ private extension HomeViewModel {
             case .failure(let error):
                 self.error = error
         }
+    }
+}
+
+extension HomeViewModel: ExperienceDetailsDelegate {
+    func experienceDidUpdateLikes(experienceId: String, newLikesCount: Int) {
+        updateLikesCount(for: experienceId, newCount: newLikesCount)
     }
 }
