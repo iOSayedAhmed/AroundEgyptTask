@@ -10,7 +10,7 @@ import Foundation
 struct IdentifiableString: Identifiable {
     let id = UUID()
     let value: String
-    
+
     init(_ value: String) {
         self.value = value
     }
