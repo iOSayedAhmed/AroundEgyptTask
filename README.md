@@ -5,10 +5,12 @@ A modern iOS app for exploring Egyptian experiences in 360 degrees with offline 
 
 https://github.com/user-attachments/assets/963977b9-a126-425e-96b5-1c189b504768
 
-![iOS](https://github.com/user-attachments/assets/673bc191-7b68-49db-a8f8-c9bfe0759264)
-![iOS](https://github.com/user-attachments/assets/56266bf8-d2dc-418c-b5d2-3fba3d65272d)
-![iOS](https://github.com/user-attachments/assets/cd2db2a5-6877-4946-9340-9c1d544873af)
-
+📱 Screenshots
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/673bc191-7b68-49db-a8f8-c9bfe0759264" width="250" height="500">
+  <img src="https://github.com/user-attachments/assets/56266bf8-d2dc-418c-b5d2-3fba3d65272d" width="250" height="500">
+  <img src="https://github.com/user-attachments/assets/cd2db2a5-6877-4946-9340-9c1d544873af" width="250" height="500">
+</p>
 
 
 ## 🚀 Features
