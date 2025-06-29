@@ -5,14 +5,6 @@
 //  Created by iOSAYed on 29/06/2025.
 //
 
-
-//
-//  ExperienceCardView.swift
-//  AroundEgypt
-//
-//  Created by iOSAYed on 29/06/2025.
-//
-
 import Kingfisher
 import SwiftUI
 
@@ -21,7 +13,6 @@ struct ExperienceCardView: View {
     let onSelectExperience: (String) -> Void
     let onLikeExperience: (String) -> Void
 
-    @State private var isLiked: Bool = false
     private let width = UIScreen.main.bounds.width - 40
 
     var body: some View {
@@ -35,9 +26,6 @@ struct ExperienceCardView: View {
             infoView()
         }
         .background(Color.white)
-        .task {
-            isLiked = LikesCacheManager.shared.getState(for: experience.id)
-        }
         .onTapGesture {
             onSelectExperience(experience.id)
         }
@@ -134,11 +122,10 @@ private extension ExperienceCardView {
                 Text("\(experience.likes)")
                     .font(.body.bold())
 
-                Image(systemName: isLiked ? "heart.fill" : "heart")
+                Image(systemName: experience.isLiked ? "heart.fill" : "heart")
                     .foregroundColor(.peach)
             }.onTapGesture {
-                if !isLiked {
-                    isLiked = true
+                if !experience.isLiked {
                     onLikeExperience(experience.id)
                     LikesCacheManager.shared.likeTapped(with: experience.id)
                 }

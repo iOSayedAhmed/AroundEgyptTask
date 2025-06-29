@@ -25,7 +25,9 @@ struct SearchExperiencesUseCase {
                     title: responseModel.title,
                     views: responseModel.views,
                     likes: responseModel.likes,
-                    isRecommended: false
+                    isRecommended: false,
+                    description: responseModel.description,
+                    cityName: responseModel.city.name
                 )
             }
             return .success(experiences)
