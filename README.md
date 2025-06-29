@@ -182,11 +182,6 @@ docs: update README
 - ✅ **Modern iOS** patterns and best practices
 - ✅ **Performance Optimized** with lazy loading and caching
 
-## 👥 Authors
-
-- **iOSAYed** - iOS Developer
-- **Ahmed Nafie** - UI Developer
-
 ## 🙏 Acknowledgments
 
 Built with modern iOS development practices and clean architecture principles.
