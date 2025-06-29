@@ -5,14 +5,6 @@
 //  Created by iOSAYed on 29/06/2025.
 //
 
-
-//
-//  RecommendedExperiencesView.swift
-//  AroundEgypt
-//
-//  Created by iOSAYed on 29/06/2025.
-//
-
 import SwiftUI
 
 struct RecommendedExperiencesView: View {

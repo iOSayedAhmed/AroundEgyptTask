@@ -5,14 +5,6 @@
 //  Created by iOSAYed on 29/06/2025.
 //
 
-
-//
-//  ExperiencesListView.swift
-//  AroundEgypt
-//
-//  Created by iOSAYed on 29/06/2025.
-//
-
 import SwiftUI
 
 struct ExperiencesListView: View {

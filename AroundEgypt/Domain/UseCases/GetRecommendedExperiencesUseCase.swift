@@ -23,7 +23,7 @@ struct GetRecommendedExperiencesUseCase {
                     id: responseModel.id,
                     imagePath: responseModel.imagePath,
                     title: responseModel.title,
-                    views: responseModel.views ,
+                    views: responseModel.views,
                     likes: responseModel.likes,
                     isRecommended: true,
                     description: responseModel.description,

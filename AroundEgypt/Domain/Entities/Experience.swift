@@ -29,21 +29,34 @@ struct Experience: Identifiable {
         self.cityName = ""
         self.isLiked = LikesCacheManager.shared.getState(for: id)
     }
-
-    init(id: String, imagePath: String, title: String, views: Int, likes: Int, isRecommended: Bool, description: String, cityName: String) {
-            self.id = id
-            self.imagePath = imagePath
-            self.title = title
-            self.views = views
-            self.likes = likes
-            self.isRecommended = isRecommended
-            self.description = description
-            self.cityName = cityName
-            self.isLiked = LikesCacheManager.shared.getState(for: id)
+    
+    // swiftlint:disable:next line_length
+    init(
+        id: String,
+        imagePath: String,
+        title: String,
+        views: Int,
+        likes: Int,
+        isRecommended: Bool,
+        description: String,
+        cityName: String
+    ) {
+        self.id = id
+        self.imagePath = imagePath
+        self.title = title
+        self.views = views
+        self.likes = likes
+        self.isRecommended = isRecommended
+        self.description = description
+        self.cityName = cityName
+        self.isLiked = LikesCacheManager.shared
+            .getState(
+                for: id
+            )
         }
 }
 
-extension Experience {
+extension Experience{
     static let empty = Experience(id: "", imagePath: "", title: "", views: 0, likes: 0, isRecommended: false)
 
     static let preview = Experience(
