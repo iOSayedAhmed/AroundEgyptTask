@@ -1,0 +1,38 @@
+# Xcode
+.DS_Store
+build/
+DerivedData/
+xcuserdata/
+*.xcuserstate
+*.xcworkspace/xcuserdata
+*.moved-aside
+*.xcscmblueprint
+
+# SwiftPM
+/.build/
+/Packages/
+/Package.resolved
+
+# SPM cache
+.swiftpm/
+
+# Archives
+*.xcarchive
+
+
+# SwiftLint
+.swiftlint.yml
+.swiftformat
+
+# Firebase
+GoogleService-Info.plist
+
+# Env files
+.env
+*.env
+
+# Xcode Preview Cache
+*.preview-thumbnails
+
+# Personal settings
+*.xcconfig.local
