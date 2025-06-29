@@ -10,18 +10,7 @@
 		5D06B67B2D04D5FC00627FB6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5D06B67A2D04D5FC00627FB6 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		5D06B79C2D05063A00627FB6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5DB932CB2D01F4D000B31DE3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5DB932D22D01F4D000B31DE3;
-			remoteInfo = AroundEgypt;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		5D06B7982D05063A00627FB6 /* AroundEgyptTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AroundEgyptTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DB932D32D01F4D000B31DE3 /* AroundEgypt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AroundEgypt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -46,11 +35,6 @@
 /* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		5D06B7992D05063A00627FB6 /* AroundEgyptTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = AroundEgyptTests;
-			sourceTree = "<group>";
-		};
 		5DB932D52D01F4D000B31DE3 /* AroundEgypt */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -63,13 +47,6 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5D06B7952D05063A00627FB6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5DB932D02D01F4D000B31DE3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -85,7 +62,6 @@
 			isa = PBXGroup;
 			children = (
 				5DB932D52D01F4D000B31DE3 /* AroundEgypt */,
-				5D06B7992D05063A00627FB6 /* AroundEgyptTests */,
 				5DB932D42D01F4D000B31DE3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,7 +70,6 @@
 			isa = PBXGroup;
 			children = (
 				5DB932D32D01F4D000B31DE3 /* AroundEgypt.app */,
-				5D06B7982D05063A00627FB6 /* AroundEgyptTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,29 +77,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5D06B7972D05063A00627FB6 /* AroundEgyptTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5D06B79E2D05063A00627FB6 /* Build configuration list for PBXNativeTarget "AroundEgyptTests" */;
-			buildPhases = (
-				5D06B7942D05063A00627FB6 /* Sources */,
-				5D06B7952D05063A00627FB6 /* Frameworks */,
-				5D06B7962D05063A00627FB6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5D06B79D2D05063A00627FB6 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				5D06B7992D05063A00627FB6 /* AroundEgyptTests */,
-			);
-			name = AroundEgyptTests;
-			packageProductDependencies = (
-			);
-			productName = AroundEgyptTests;
-			productReference = 5D06B7982D05063A00627FB6 /* AroundEgyptTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		5DB932D22D01F4D000B31DE3 /* AroundEgypt */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5DB932E12D01F4D200B31DE3 /* Build configuration list for PBXNativeTarget "AroundEgypt" */;
@@ -159,10 +111,6 @@
 				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
-					5D06B7972D05063A00627FB6 = {
-						CreatedOnToolsVersion = 16.0;
-						TestTargetID = 5DB932D22D01F4D000B31DE3;
-					};
 					5DB932D22D01F4D000B31DE3 = {
 						CreatedOnToolsVersion = 16.0;
 					};
@@ -187,19 +135,11 @@
 			projectRoot = "";
 			targets = (
 				5DB932D22D01F4D000B31DE3 /* AroundEgypt */,
-				5D06B7972D05063A00627FB6 /* AroundEgyptTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5D06B7962D05063A00627FB6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5DB932D12D01F4D000B31DE3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -232,13 +172,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5D06B7942D05063A00627FB6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5DB932CF2D01F4D000B31DE3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -248,51 +181,7 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		5D06B79D2D05063A00627FB6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5DB932D22D01F4D000B31DE3 /* AroundEgypt */;
-			targetProxy = 5D06B79C2D05063A00627FB6 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		5D06B79F2D05063A00627FB6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 424W3J2WNA;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Nafie.AroundEgyptTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AroundEgypt.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AroundEgypt";
-			};
-			name = Debug;
-		};
-		5D06B7A02D05063A00627FB6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 424W3J2WNA;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Nafie.AroundEgyptTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AroundEgypt.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AroundEgypt";
-			};
-			name = Release;
-		};
 		5DB932DF2D01F4D200B31DE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -475,15 +364,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5D06B79E2D05063A00627FB6 /* Build configuration list for PBXNativeTarget "AroundEgyptTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5D06B79F2D05063A00627FB6 /* Debug */,
-				5D06B7A02D05063A00627FB6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		5DB932CE2D01F4D000B31DE3 /* Build configuration list for PBXProject "AroundEgypt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
