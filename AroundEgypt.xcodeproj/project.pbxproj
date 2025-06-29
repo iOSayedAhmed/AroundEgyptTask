@@ -30,7 +30,6 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				"Core/Extensions/Color+Theme.swift",
-				"Core/Extensions/String+Identifiable.swift",
 			);
 			target = 5DB932D22D01F4D000B31DE3 /* AroundEgypt */;
 		};
@@ -42,7 +41,6 @@
 			buildPhase = 5DB932D12D01F4D000B31DE3 /* Resources */;
 			membershipExceptions = (
 				"Core/Extensions/Color+Theme.swift",
-				"Core/Extensions/String+Identifiable.swift",
 			);
 		};
 /* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
@@ -422,7 +420,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AroundEgypt/Preview Content\"";
-				DEVELOPMENT_TEAM = 424W3J2WNA;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -436,7 +434,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Nafie.AroundEgypt;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AroundEgypt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -452,7 +450,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AroundEgypt/Preview Content\"";
-				DEVELOPMENT_TEAM = 424W3J2WNA;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -466,7 +464,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Nafie.AroundEgypt;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AroundEgypt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
